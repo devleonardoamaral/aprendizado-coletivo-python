@@ -1,4 +1,5 @@
 site_name: Aprendizado Coletivo
+docs_dir: articles
 nav:
   - Home: index.md
   - About: about.md
