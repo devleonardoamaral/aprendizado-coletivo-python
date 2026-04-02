@@ -1,8 +1,8 @@
-site_name: Aprendizado Coletivo
+site_name: Aprendizado Coletivo Python
 site_url: https://devleonardoamaral.github.io/aprendizado-coletivo-python/
 repo_name: GitHub
 docs_dir: articles
-repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python
+repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python/
 use_directory_urls: true
 theme:
   name: material

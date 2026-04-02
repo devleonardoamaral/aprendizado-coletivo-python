@@ -13,10 +13,18 @@
 
   <!-- Standard Open Graph Requirements -->
   <meta property="og:title" content="{{ title }}"/>
-  {% if page and page.meta and page.meta.description %}
-    <meta property="og:description" content="{{ page.meta.description }}"/>
+  {% if page and page.meta %}
+    {% if page.meta.og_image %}
+      <meta property="og:image" content="{{ page.meta.og_image }}" />
+    {% else %}
+      <meta property="og:image" content="img/default_open_graph.webp" />
+    {% endif %}
+    {% if page.meta.description %}
+      <meta property="og:description" content="{{ page.meta.description }}"/>
+    {% endif %}
   {% endif %}
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="{{ page.canonical_url }}"/>
+
 
 {% endblock %}
