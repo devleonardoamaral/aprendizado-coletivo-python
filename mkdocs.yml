@@ -4,6 +4,28 @@ repo_name: GitHub
 docs_dir: articles
 repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python
 use_directory_urls: true
+theme:
+  name: material
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  features:
+    - navigation.footer
+  palette:
+    # dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: yellow
+      accent: deep purple
+    # light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
 
 nav:
   - Página Inicial: index.md
@@ -11,10 +33,6 @@ nav:
       - Fundamentos:
           - Tipos Primitivos: python/fundamentos/tipos_primitivos.md
   - Sobre o Projeto: about.md
-
-theme:
-  name: material
-  custom_dir: overrides
 
 plugins:
   - meta
