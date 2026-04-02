@@ -9,14 +9,14 @@
   {% endif %}
 
   <!-- Discord Specific Overrides -->
-  <meta name="theme-color" content="#407EB0" />
+  <meta name="theme-color" content="#407EB0"/>
 
   <!-- Standard Open Graph Requirements -->
-  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:title" content="{{ title }}"/>
   {% if page and page.meta and page.meta.description %}
-    <meta property="og:description" content="{{ page.meta.description }}" />
+    <meta property="og:description" content="{{ page.meta.description }}"/>
   {% endif %}
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ page.canonical_url }}"/>
 
 {% endblock %}
