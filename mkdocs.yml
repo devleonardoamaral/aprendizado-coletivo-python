@@ -2,7 +2,6 @@ site_name: Aprendizado Coletivo Python
 site_description: Construção coletiva de conhecimentos sobre Python, desenvolvimento e tecnologia.
 site_url: https://devleonardoamaral.github.io/aprendizado-coletivo-python/
 repo_name: GitHub
-docs_dir: articles
 repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python/
 use_directory_urls: true
 
@@ -10,8 +9,8 @@ theme:
   name: material
   language: pt-BR
   custom_dir: overrides
-  logo: images/logo.png
-  favicon: images/favicon.ico
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
   font:
     text: Merriweather Sans
     code: Red Hat Mono
@@ -34,12 +33,14 @@ theme:
       accent: deep orange
 
 nav:
-  - Página Inicial: index.md
+  - Página Inicial: blog/index.md
   - Python:
       - Fundamentos:
-          - Tipos Primitivos: python/fundamentos/tipos_primitivos.md
-  - Sobre o Projeto: about.md
+          - Tipos Primitivos: blog/posts/python/fundamentos/tipos_primitivos.md
+          - Variáveis: blog/posts/python/fundamentos/variaveis.md
+  - Sobre o Projeto: blog/collaborate/about.md
 
 plugins:
   - meta
   - search
+  - blog
