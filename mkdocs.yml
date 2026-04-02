@@ -5,12 +5,13 @@ repo_name: GitHub
 docs_dir: articles
 repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python/
 use_directory_urls: true
+
 theme:
   name: material
   language: pt-BR
   custom_dir: overrides
   logo: images/logo.png
-  site_favicon: images/favicon.ico
+  favicon: images/favicon.ico
   font:
     text: Merriweather Sans
     code: Red Hat Mono
