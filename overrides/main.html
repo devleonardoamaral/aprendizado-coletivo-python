@@ -15,9 +15,9 @@
   <meta property="og:title" content="{{ title }}"/>
 
   {% if page and page.meta and page.meta.og_image %}
-    <meta property="og:image" content="{{ page.meta.og_image }}" />
+    <meta property="og:image" content="{{ config.site_url }}/img/{{ page.meta.og_image }}" />
   {% else %}
-    <meta property="og:image" content="img/default_open_graph.webp" />
+    <meta property="og:image" content="{{ config.site_url }}/img/default_open_graph.webp" />
   {% endif %}
 
   {% if page and page.meta and page.meta.description %}
