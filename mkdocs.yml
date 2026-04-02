@@ -33,14 +33,15 @@ theme:
       accent: deep orange
 
 nav:
-  - Página Inicial: blog/index.md
+  - index.md
   - Python:
       - Fundamentos:
-          - Tipos Primitivos: blog/posts/python/fundamentos/tipos_primitivos.md
-          - Variáveis: blog/posts/python/fundamentos/variaveis.md
-  - Sobre o Projeto: blog/collaborate/about.md
+          - Tipos Primitivos: posts/python/fundamentos/tipos_primitivos.md
+  - Sobre: collaborate/about.md
 
 plugins:
   - meta
   - search
-  - blog
+  - blog:
+      blog_dir: .
+      archive: false
