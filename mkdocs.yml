@@ -1,5 +1,5 @@
 site_name: Aprendizado Coletivo
-site_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python/
+site_url: https://devleonardoamaral.github.io/aprendizado-coletivo-python/
 docs_dir: articles
 nav:
   - Home: index.md
