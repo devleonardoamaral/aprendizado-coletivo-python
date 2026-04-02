@@ -7,9 +7,16 @@
   {% elif page and page.title and not page.is_homepage %}
     {% set title = title ~ " - " ~ page.title | striptags %}
   {% endif %}
+
+  <!-- Discord Specific Overrides -->
+  <meta name="theme-color" content="#407EB0"
+
+  <!-- Standard Open Graph Requirements -->
   <meta property="og:title" content="{{ title }}" />
+  {% if page and page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}" />
+  {% endif %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ page.canonical_url }}" />
-  <meta property="og:description" content="{{ config.site_description }}" />
-  <meta name="theme-color" content="#FF0000"
+
 {% endblock %}

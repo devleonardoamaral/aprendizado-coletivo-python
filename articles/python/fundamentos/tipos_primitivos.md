@@ -1,9 +1,6 @@
 ---
 title: Tipos Primitivos
-summary: Introdução aos tipos primitivos do Python.
-authors:
-    - Leonardo Amaral
-date: April 02, 2026
+description: Introdução aos tipos primitivos do Python.
 ---
 
 # Tipos Primitivos
