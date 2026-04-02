@@ -15,13 +15,14 @@
   <meta property="og:title" content="{{ title }}"/>
 
   {% if page and page.meta and page.meta.og_image %}
-    <meta property="og:image" content="{{ config.site_url }}img/{{ page.meta.og_image }}" />
+    <meta property="og:image" content="{{ config.site_url }}images/{{ page.meta.og_image }}"/>
   {% else %}
-    <meta property="og:image" content="{{ config.site_url }}img/default_open_graph.webp" />
+    <meta property="og:image" content="{{ config.site_url }}images/default_open_graph.png"/>
   {% endif %}
 
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
   {% if page and page.meta and page.meta.description %}
     <meta property="og:description" content="{{ page.meta.description }}"/>
@@ -31,6 +32,5 @@
 
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="{{ page.canonical_url }}"/>
-
-
+  <meta property="og:locale" content="pt_BR"/>
 {% endblock %}
