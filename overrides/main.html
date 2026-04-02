@@ -20,6 +20,9 @@
     <meta property="og:image" content="{{ config.site_url }}img/default_open_graph.webp" />
   {% endif %}
 
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
   {% if page and page.meta and page.meta.description %}
     <meta property="og:description" content="{{ page.meta.description }}"/>
   {% else %}
