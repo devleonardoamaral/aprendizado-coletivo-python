@@ -1,0 +1,3 @@
+# Diretrizes de colaboração
+
+...

@@ -1,8 +1,20 @@
 site_name: Aprendizado Coletivo
 site_url: https://devleonardoamaral.github.io/aprendizado-coletivo-python/
+repo_name: GitHub
 docs_dir: articles
+repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python
+use_directory_urls: true
+
 nav:
-  - Home: index.md
-  - About: about.md
+  - Página Inicial: index.md
+  - Python:
+      - Fundamentos:
+          - Tipos Primitivos: python/fundamentos/tipos_primitivos.md
+  - Sobre o Projeto: about.md
+
 theme:
   name: material
+  custom_dir: overrides
+
+plugins:
+  - meta

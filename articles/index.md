@@ -1,3 +1,1 @@
-# Python
-
-Texto de teste
+# Bem-vindo(a) ao Aprendizado Coletivo Python
