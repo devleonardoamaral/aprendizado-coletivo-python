@@ -6,6 +6,7 @@ repo_url: https://github.com/devleonardoamaral/aprendizado-coletivo-python
 use_directory_urls: true
 theme:
   name: material
+  language: pt-BR
   font:
     text: Merriweather Sans
     code: Red Hat Mono
