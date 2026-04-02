@@ -1,4 +1,5 @@
 site_name: Aprendizado Coletivo Python
+site_description: Construção coletiva de conhecimentos sobre Python, desenvolvimento e tecnologia.
 site_url: https://devleonardoamaral.github.io/aprendizado-coletivo-python/
 repo_name: GitHub
 docs_dir: articles
