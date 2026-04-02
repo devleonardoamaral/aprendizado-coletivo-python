@@ -10,6 +10,10 @@
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ page.canonical_url }}" />
-  <meta property="og:description" content="{{ config.site_description }}" />
+
+  {% if page and page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}" />
+  {% endif %}
+
   <meta name="theme-color" content="#FF0000"
 {% endblock %}
