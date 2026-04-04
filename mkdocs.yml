@@ -35,8 +35,7 @@ theme:
 nav:
   - index.md
   - Python:
-      - Fundamentos:
-          - Tipos Primitivos: posts/python/fundamentos/tipos_primitivos.md
+      - Tipos Embutidos: posts/python/tipos_embutidos.md
   - Sobre: collaborate/about.md
 
 plugins:
