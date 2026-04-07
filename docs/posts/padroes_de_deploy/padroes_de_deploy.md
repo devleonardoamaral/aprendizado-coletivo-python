@@ -4,17 +4,20 @@ description: Introdução aos tipos de deploy e seus tradeoffs.
 authors:
   - fernando_santini
 date:
-  created: 2026-06-04
-  updated: 2026-06-04
+  created: 2026-04-07
+  updated: 2026-04-07
 ---
 
 # Estratégias de implantação de deploy
 
-A estratégia de implantação é o método que uma equipe usa para levar um novo código para o ambiente de produção orquestrada por Devops e devs. Ela determina como o tráfego é alternado entre versões, quanto risco cada versão representa e a rapidez com que a equipe pode reverter (rollback) quando algo falha. A escolha não é acadêmica: uma incompatibilidade entre estratégia e sistema pode significar indisponibilidade (downtime), lançamentos falhos ou horas de recuperação manual.
+A estratégia de implantação é o método que uma equipe usa para levar um novo código para o ambiente de produção orquestrada por Devops e devs; Ela determina como o tráfego é alternado entre versões, quanto risco cada versão representa e a rapidez com que a equipe pode reverter (rollback) quando algo falha. A escolha não é acadêmica: uma incompatibilidade entre estratégia e sistema pode significar indisponibilidade (downtime), lançamentos falhos ou horas de recuperação manual.
 
-**Implantar** significa colocar o código em um ambiente. **Liberar** (release) significa expor esse código aos usuários. Algumas estratégias tratam esses dois eventos como um só. Uma atualização contínua (rolling update) substitui as instâncias, e os usuários acessam a nova versão à medida que cada uma entra no ar. Outras estratégias os separam deliberadamente. Feature flags (sinalizadores de funcionalidade) permitem que uma equipe implante na terça-feira e libere na quinta-feira, após validação interna. Essa separação molda todas as seções seguintes.
+**Implantar** significa colocar o código em um ambiente. 
+**Liberar** (release) significa expor esse código aos usuários. 
 
-## Quais são os diferentes tipos de estratégias de implantação?
+Algumas estratégias tratam esses dois eventos como um só. Uma atualização contínua (rolling update) substitui as instâncias, e os usuários acessam a nova versão à medida que cada uma entra no ar. Outras estratégias os separam deliberadamente. Feature flags (sinalizadores de funcionalidade) permitem que uma equipe implante na terça-feira e libere na quinta-feira, após validação interna. Essa separação molda todas as seções seguintes.
+
+### Quais são os diferentes tipos de estratégias de implantação?
 
 Cada estratégia faz uma troca entre duas coisas: quanto risco ela impõe à produção e quanto esforço é necessário para configurá-la. Uma implantação do tipo "big bang" é extremamente simples, mas derruba todo o sistema. Uma implantação canário (canary) mal toca no tráfego de produção, mas precisa de divisão de tráfego, coleta de métricas e análise automatizada para funcionar. Nenhum dos eixos é melhor. A combinação certa depende do que está sendo implantado e do que quebra se algo der errado.
 
