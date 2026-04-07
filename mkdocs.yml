@@ -36,7 +36,10 @@ nav:
   - index.md
   - Python:
       - Tipos Embutidos: posts/python/tipos_embutidos.md
+  - Padroes de Deploy:
+      - Tipos de deploy: posts/padroes_de_deploy/padroes_de_deploy.md
   - Sobre: collaborate/about.md
+  
 
 plugins:
   - meta
