@@ -14,9 +14,33 @@ date:
 
 ## Introdução
 
-Esse artigo tem o objetivo de introduzir os principais tipos embutidos do Python. Conhecer suas características e comportamentos permite um melhor aproveitamento dos recursos que a linguagem tem a oferecer e a previsibilidade sobre o comportamento do código evita bugs inesperados.
+Este texto é uma introdução aos **tipos embutidos** do Python. São tipos de variáveis que permitem armazenar e trabalhar com dados na linguagem. Tipos embutidos fazem parte da base do Python, ou seja, não é preciso instalar nenhuma biblioteca externa ou extensões da linguagem para poder trabalhar com os tipos embutidos. Além disso, uma grande parte dos tipos embutidos são **tipos built-in**: que estão disponíveis globalmente de qualquer lugar e possuem palavras reservadas na linguagem.
 
-Diferente de outras linguagens de programação, Python não possui tipos primitivos da forma tradicional. Em Python, tudo é um objeto, incluindo os tipos mais básicos como `int`, `float`, `bool` e `str`. Por exemplo, o `int` em Python é um objeto completo com métodos (`int.to_bytes()`, `int.bit_length()`, etc), ao invés de valores brutos sem metadados. Esta característica dos tipos Python permite uma maior abstração ao lidar com os dados.
+```py
+numero = int(65) # Pode ser usado sem importar nada no código
+```
+
+Diferente de outras linguagens de programação, **Python não possui tipos primitivos** da forma tradicional. Em Python, **tudo é um objeto**, incluindo os tipos mais básicos como `int`, `float`, `bool` e `str`. Por exemplo, o `int`, que representa um número inteiro em Python, ao invés de ser apenas um número bruto, é possível acessar métodos a partir da varável que está armazenando este tipo de dado. Isso garante uma maior abstração na linguagem, fazendo com que o programador não precise envelopar o valor bruto com um objeto que implementa estes métodos.
+
+```py
+numero = 65
+print(numero.to_bytes()) # Saída: b'A'
+print(numero.bit_count()) # Saída: 2
+```
+
+Entender como trabalhar com os principais tipos embutidos do Python é importante para um maior controle sobre os dados com que se está lidando, evitando bugs inesperados e/ou dificuldade na hora de estruturar e implementar algorítimos. Um ótimo exemplo são os números de ponto flutuante, é fácil um desenvolvedor que não conhece o funcionamento deles na linguagem acabar corrompendo os dados ao manipula-los.
+
+```py
+numero1 = 0.1 + 0.1 + 0.1
+numero2 = 0.3
+
+if numero1 == numero2:
+    print("Os números são iguais.")
+else:
+    print("Os números não são iguais.") # O resultado será esse
+```
+
+Apenas olhando para o código, sem entender como o Python lida com esses números, parece estar tudo correto. Mas, na verdade, as duas variáveis acabam armazenando números com valores diferentes. Mais adiante, neste artigo, será abordado de forma aprofundada os números flutuantes e os principais tipos embutidos do Python para que o você seja capaz de analisar, entender e lidar com esta e outras situações similares.
 
 ## Tipos Numéricos
 
