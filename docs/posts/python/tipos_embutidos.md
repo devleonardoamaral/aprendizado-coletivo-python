@@ -4,15 +4,15 @@ description: Introdução aos tipos de embutidos do Python.
 authors:
   - leonardo_amaral
 date:
-  created: 2026-02-03
-  updated: 2026-02-09
+  created: 2026-04-04
+  updated: 2026-04-14
 ---
 
 # Tipos de Embutidos
 
-> ⚠️ Este artigo ainda é um rascunho e pode estar faltando conteúdo a ser abordado.
+> ⚠️ Este artigo é um rascunho e pode conteúdo ausente ou incompleto.
 
-## Introdução
+## 1. Introdução
 
 Este texto é uma introdução aos **tipos embutidos** do Python. São tipos de variáveis que permitem armazenar e trabalhar com dados na linguagem. Tipos embutidos fazem parte da base do Python, ou seja, não é preciso instalar nenhuma biblioteca externa ou extensões da linguagem para poder trabalhar com os tipos embutidos. Além disso, uma grande parte dos tipos embutidos são **tipos built-in**: que estão disponíveis globalmente de qualquer lugar e possuem palavras reservadas na linguagem.
 
@@ -40,13 +40,36 @@ else:
     print("Os números não são iguais.") # O resultado será esse
 ```
 
-Apenas olhando para o código, sem entender como o Python lida com esses números, parece estar tudo correto. Mas, na verdade, as duas variáveis acabam armazenando números com valores diferentes. Mais adiante, neste artigo, será abordado de forma aprofundada os números flutuantes e os principais tipos embutidos do Python para que o você seja capaz de analisar, entender e lidar com esta e outras situações similares.
+Apenas olhando para o código, sem entender como o Python lida com esses números, parece estar tudo correto. Mas, na verdade, as duas variáveis acabam armazenando números com valores diferentes. Mais adiante, neste artigo, será abordado de forma aprofundada os números flutuantes e os principais tipos embutidos do Python para que o você seja capaz de analisar, entender e lidar com estas e outras situações similares.
 
-## Tipos Numéricos
+## 2. Valor verdade dos objetos
+
+Qualquer objeto em Python pode ser testado se é verdade ou falso. Por padrão, os objetos são considerados verdade quando submetidos a um teste de verdade utilizando **operadores booleanos** ou condições booleanas como **if** e **while**, exceto quando o método `object.__bool__()` retorna `False` ou o objeto possuí o método `object.__len__()` e ele retorna `0`. Estes métodos fazem parte de um grupo especial de métodos da linguagem, comumente chamados de **métodos especiais** ou **métodos dunder**, são utilizados para customizar objetos.
+
+```py
+numero = 2
+print(numero.__bool__()) # Saída: True
+print(numero.__len__())  # Saída: AttributeError
+print(numero == 2)       # Saída: True
+print(numero != 2)       # Saída: False
+print(numero > 3)        # Saída: False
+print(numero < 3)        # Saída: False
+print(numero >= 3)       # Saída: True
+```
+
+Alguns dos objetos built-in que são considerados falso:
+
+| Tipo                         | Exemplos                               |
+| ---------------------------- | -------------------------------------- |
+| Constantes                   | None e False                           |
+| Valores numéricos            | 0, 0.0, 0j, Decimal(0), Fraction(0, 1) |
+| Sequências e coleções vazias | '', [], (), {}, set(), range(0)        |
+
+## 3. Tipos Numéricos
 
 Python fornece três tipos numéricos built-in — funcionalidades built-in são recursos que não precisam de importação para serem utilizadas na linguagem e possuem nomes reservados: inteiros (`int`), números de ponto flutuante (`float`) e números complexos (`complex`). É importante destacar que os valores booleanos em Python são um subtipo (herança) built-in dos números inteiros, sendo o `True` equivalente a `1` e `False` equivalente a `0`.
 
-### Construtores
+### 3.1. Construtores
 
 Os construtores `int()`, `float()` e `complex()` podem ser utilizados para criar números de um tipo específico. 
 
@@ -66,7 +89,7 @@ num_complexo = 1.0+2.0j
 num_complexo = 1+2j
 ```
 
-### Precisão dos Números Flutuantes
+### 3.2. Precisão dos Números Flutuantes
 
 Números de ponto flutuante possuem precisão limitada de acordo com a arquitetura do sistema onde o Python está sendo executado. Essa precisão é equivalente ao double da linguagem C, na qual o interpretador padrão do Python, o CPython, é desenvolvido. 
 
@@ -97,7 +120,7 @@ Exemplos de números significativos:
 | 0,0012301230   | 1230123        | 7 significativos    |
 | 1230123,00     | 1230123        | 7 significativos    |
 
-### Problemas ao lidar com Números de Ponto Flutuante
+### 3.3. Problemas ao lidar com Números de Ponto Flutuante
 
 Como vimos anteriormente, os números de ponto flutuante têm **precisão limitada**; e por conta disso, podem ter algumas características que podem ser problemáticas em operações aritiméticas e expressões condicionais. O exemplo abaixo ilustra bem uma situação comum em um código feito por um desenvolvedor que não conhece muito bem os números de ponto flutuante:
 
