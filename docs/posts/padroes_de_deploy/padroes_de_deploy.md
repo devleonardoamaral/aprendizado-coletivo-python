@@ -12,6 +12,8 @@ date:
 
 A estratégia de implantação é o método que uma equipe usa para levar um novo código para o ambiente de produção orquestrada por Devops e devs; Ela determina como o tráfego é alternado entre versões, quanto risco cada versão representa e a rapidez com que a equipe pode reverter (rollback) quando algo falha. A escolha não é acadêmica: uma incompatibilidade entre estratégia e sistema pode significar indisponibilidade (downtime), lançamentos falhos ou horas de recuperação manual.
 
+<!-- more -->
+
 **Implantar** significa colocar o código em um ambiente. 
 **Liberar** (release) significa expor esse código aos usuários. 
 

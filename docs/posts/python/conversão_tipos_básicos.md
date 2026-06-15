@@ -12,6 +12,8 @@ date:
 
 Para converter um tipo para outro, chamamos o construtor do tipo e passamos um valor conversível como argumento.
 
+<!-- more -->
+
 ### Texto (`str`)
 
 Exemplos de conversão de valor para texto.

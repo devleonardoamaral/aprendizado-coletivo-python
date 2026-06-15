@@ -47,6 +47,7 @@ plugins:
   - blog:
       blog_dir: .
       archive: false
+      post_excerpt: required
 
 markdown_extensions:
   - pymdownx.highlight:
