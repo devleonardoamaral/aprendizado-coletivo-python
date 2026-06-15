@@ -12,6 +12,8 @@ date:
 
 Os tipos básicos são as formas principais que o Python usa para guardar e trabalhar com informações. Eles são importantes porque o Python precisa saber que tipo de dado está lidando para decidir o que fazer com ele.
 
+<!-- more -->
+
 Veja um exemplo prático:
 
 - Se você somar **números**, o Python faz uma conta matemática.
