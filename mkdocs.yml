@@ -37,11 +37,9 @@ nav:
   - Python:
       - Tipos Básicos: posts/python/tipos_básicos.md
       - Conversão de Tipos Básicos: posts/python/conversão_tipos_básicos.md
-      - Tipos Embutidos: posts/python/tipos_embutidos.md
   - Padroes de Deploy:
       - Padroes de Deploy: posts/padroes_de_deploy/padroes_de_deploy.md
   - Sobre: collaborate/about.md
-  
 
 plugins:
   - meta
