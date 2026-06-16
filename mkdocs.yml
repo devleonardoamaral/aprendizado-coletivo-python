@@ -17,13 +17,6 @@ theme:
   features:
     - navigation.footer
   palette:
-    # dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: yellow
-      accent: deep purple
     # light mode
     - scheme: default
       toggle:
@@ -31,6 +24,13 @@ theme:
         name: Light mode
       primary: blue
       accent: deep orange
+    # dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: yellow
+      accent: deep purple
 
 nav:
   - index.md
