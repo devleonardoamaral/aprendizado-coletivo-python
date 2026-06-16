@@ -35,8 +35,8 @@ theme:
 nav:
   - index.md
   - Python:
-      - Tipos Básicos: posts/python/tipos_básicos.md
-      - Conversão de Tipos Básicos: posts/python/conversão_tipos_básicos.md
+      - Tipos Básicos: posts/python/tipos_basicos.md
+      - Conversão de Tipos Básicos: posts/python/conversao_tipos.md
   - Padroes de Deploy:
       - Padroes de Deploy: posts/padroes_de_deploy/padroes_de_deploy.md
   - Sobre: collaborate/about.md
