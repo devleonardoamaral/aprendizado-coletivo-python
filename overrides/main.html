@@ -1,37 +1,64 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
-  {% set title = config.site_name %}
-  {% if page and page.meta and page.meta.title %}
-    {% set title = title ~ " - " ~ page.meta.title %}
-  {% elif page and page.title and not page.is_homepage %}
-    {% set title = title ~ " - " ~ page.title | striptags %}
-  {% endif %}
+    {% set title = config.site_name %}
+    {% if page and page.meta and page.meta.title %}
+        {% set title = title ~ " - " ~ page.meta.title %}
+    {% elif page and page.title and not page.is_homepage %}
+        {% set title = title ~ " - " ~ page.title | striptags %}
+    {% endif %}
 
-  <!-- Discord Specific Overrides -->
-  <meta name="theme-color" content="#407EB0"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+    <!-- Discord Specific Overrides -->
+    <meta name="theme-color" content="#407EB0"/>
+    <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Standard Open Graph Requirements -->
-  <meta property="og:title" content="{{ title }}"/>
+    <!-- Standard Open Graph Requirements -->
+    <meta property="og:title" content="{{ title }}"/>
 
-  {% if page and page.meta and page.meta.og_image %}
-    <meta property="og:image" content="{{ config.site_url }}assets/images/{{ page.meta.og_image }}"/>
-  {% else %}
-    <meta property="og:image" content="{{ config.site_url }}assets/images/default_open_graph.png"/>
-  {% endif %}
+    {% if page and page.meta and page.meta.og_image %}
+        <meta property="og:image" content="{{ config.site_url }}assets/images/{{ page.meta.og_image }}"/>
+    {% else %}
+        <meta property="og:image" content="{{ config.site_url }}assets/images/default_open_graph.png"/>
+    {% endif %}
 
-  <meta property="og:image:type" content="image/png"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
 
-  {% if page and page.meta and page.meta.description %}
-    <meta property="og:description" content="{{ page.meta.description }}"/>
-  {% else %}
-    <meta property="og:description" content="{{ config.site_description }}"/>
-  {% endif %}
+    {% if page and page.meta and page.meta.description %}
+        <meta property="og:description" content="{{ page.meta.description }}"/>
+    {% else %}
+        <meta property="og:description" content="{{ config.site_description }}"/>
+    {% endif %}
 
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="{{ page.canonical_url }}"/>
-  <meta property="og:locale" content="pt_BR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ page.canonical_url }}"/>
+    <meta property="og:locale" content="pt_BR"/>
+{% endblock %}
+
+{% block footer %}
+    <footer class="md-footer">
+        <div class="md-footer-meta md-typeset">
+            <div class="md-footer-meta__inner md-grid">
+                <div class="md-copyright">
+                    <p>
+                        <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" target="_blank" rel="license noopener noreferrer">
+                            <img src="assets/images/cc.svg"
+                                    alt="Licença Creative Commons Atribuição 4.0 Internacional"
+                                    width="32"
+                                    height="32"
+                                    style="vertical-align: middle;" />
+                            <img src="assets/images/by.svg"
+                                    alt=""
+                                    width="32"
+                                    height="32"
+                                    style="vertical-align: middle;" />
+                        </a>
+                         · © 2026 Leonardo Amaral e Fernando Santini
+                    </p>
+                    <p>{% trans mkdocs_link='<a href="https://www.mkdocs.org/">MkDocs</a>' %}Blog construído com {{ mkdocs_link }}.{% endtrans %}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
