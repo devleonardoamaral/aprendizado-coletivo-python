@@ -12,8 +12,8 @@ theme:
   logo: assets/images/logo.png
   favicon: assets/images/favicon.ico
   font:
-    text: Merriweather Sans
-    code: Red Hat Mono
+    text: Open Sans
+    code: Ubuntu Sans Mono
   features:
     - navigation.footer
   palette:
