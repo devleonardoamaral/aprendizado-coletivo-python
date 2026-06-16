@@ -13,7 +13,7 @@ date:
 Às vezes você precisa transformar um dado de um tipo para outro. Por exemplo:
 
 - O usuário digitou `'25'` (texto), mas você precisa fazer conta (número).
-- Você quer mostrar o resultado `10` (número) na tela, mas precisa transformar em texto primeiro.
+- Você quer montar uma mensagem com um número, mas o Python não junta texto e número diretamente.
 
 Para isso, usamos os **construtores dos tipos**: `int()`, `float()`, `str()`, `bool()`.
 
