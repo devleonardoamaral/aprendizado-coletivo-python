@@ -27,8 +27,6 @@ Mesmo símbolo (`+`), comportamentos diferentes — tudo por causa do **tipo**.
 
 Entender tipos bem ajuda a escrever programas mais coerentes e evita erros comuns na manipulação de dados.
 
----
-
 ## Tipos básicos
 
 O Python tem dezenas de tipos, mas vamos começar pelos **quatro fundamentais**:
