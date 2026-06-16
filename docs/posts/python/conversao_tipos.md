@@ -47,6 +47,7 @@ var = int(3.1415)
 | `3.1415`        | Número decimal (`float`) | `3`       | As casas decimais são perdidas. |
 | `True`          | Verdadeiro (`bool`)      | `1`       | True converte em 1.             |
 | `False`         | Falso (`bool`)           | `0`       | False converte em 0.            |
+| `'10'`          | Texto (`str`)            | `10`      | Converte o texto em número.     |
 
 ## Número decimal (`float`)
 
