@@ -5,7 +5,7 @@ authors:
   - leonardo_amaral
 date:
   created: 2026-06-18
-  updated: 2026-06-18
+  updated: 2026-06-19
 links:
   Python Docs - Operadores: https://docs.python.org/pt-br/3.14/library/operator.html
   Python Docs - Expressões: https://docs.python.org/pt-br/3.14/reference/expressions.html
@@ -16,28 +16,6 @@ links:
 Operadores são símbolos que dizem como a linguagem deve realizar as operações matemáticas, lógicas e comparações.
 
 <!-- more -->
-
-## Tipo de dado lógico
-
-Como explicado no artigo [Tipos Básicos](tipos_basicos.md), o Python tem um tipo especial para representar apenas duas possibilidades: **verdadeiro** (`True`) e **falso** (`False`) — esse é o tipo `bool`.
-
-**Veja um exemplo:**
-
-```py
-# 1. Criamos duas "caixinhas" de informação
-moedas = 20      # Quantas moedas você tem no bolso
-preço = 10       # Quanto custa o bilhete
-
-# 2. Fazemos uma PERGUNTA para o Python
-#    "As moedas que tenho são MAIS do que o preço?"
-pode_entrar = moedas > preço
-
-# 3. O Python responde com True (verdadeiro) ou False (falso)
-#    Neste caso: 20 é maior que 10? → SIM! → True
-print(pode_entrar)   # Saída: True
-```
-
-Como mostrado no exemplo acima, o tipo `bool` é o que permite ao programa tomar decisões; por exemplo, liberar a entrada apenas quando a condição for `True`.
 
 ## Operadores Aritméticos
 
