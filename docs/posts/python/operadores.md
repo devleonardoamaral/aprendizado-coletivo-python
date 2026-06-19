@@ -5,7 +5,7 @@ authors:
   - leonardo_amaral
 date:
   created: 2026-06-18
-  updated: 2026-06-18
+  updated: 2026-06-19
 links:
   Python Docs - Operadores: https://docs.python.org/pt-br/3.14/library/operator.html
   Python Docs - Expressões: https://docs.python.org/pt-br/3.14/reference/expressions.html
