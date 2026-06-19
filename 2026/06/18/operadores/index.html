@@ -1,0 +1,1979 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introdução aos operadores do Python.">
+      
+      
+      
+        <link rel="canonical" href="https://devleonardoamaral.github.io/aprendizado-coletivo-python/2026/06/18/operadores/">
+      
+      
+        <link rel="prev" href="../../15/convers%C3%A3o-de-tipos/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Operadores - Aprendizado Coletivo Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CUbuntu+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Ubuntu Sans Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        
+    
+
+    <!-- Discord Specific Overrides -->
+    <meta name="theme-color" content="#407EB0"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <!-- Standard Open Graph Requirements -->
+    <meta property="og:title" content="Aprendizado Coletivo Python - Operadores"/>
+
+    
+        <meta property="og:image" content="https://devleonardoamaral.github.io/aprendizado-coletivo-python/assets/images/default_open_graph.png"/>
+    
+
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    
+        <meta property="og:description" content="Introdução aos operadores do Python."/>
+    
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://devleonardoamaral.github.io/aprendizado-coletivo-python/2026/06/18/operadores/"/>
+    <meta property="og:locale" content="pt_BR"/>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#o-que-sao-operadores" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../../.." title="Aprendizado Coletivo Python" class="md-header__button md-logo" aria-label="Aprendizado Coletivo Python" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aprendizado Coletivo Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operadores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/devleonardoamaral/aprendizado-coletivo-python/" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Aprendizado Coletivo Python" class="md-nav__button md-logo" aria-label="Aprendizado Coletivo Python" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Aprendizado Coletivo Python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/devleonardoamaral/aprendizado-coletivo-python/" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04/04/tipos-b%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos Básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15/convers%C3%A3o-de-tipos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversão de Tipos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operadores
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são operadores?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Aritméticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Aritméticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Aritméticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Atribuição
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Atribuição">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Atribuição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-walrusmorsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador Walrus/Morsa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-relacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Relacionais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Relacionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-relacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Relacionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-identidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Identidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Identidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-identidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Identidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-associacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Associação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Associação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-associacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Associação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Lógicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Lógicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Lógicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-bitwise-bit-a-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Bitwise (bit-a-bit)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Bitwise (bit-a-bit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-bitwise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Bitwise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-bitwise-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Bitwise de Atribuição
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de precedência
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordem de precedência">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-da-ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras da ordem de precedência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excecoes-a-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exceções à regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Ordem de Precedência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padroes de Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Padroes de Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04/07/estrat%C3%A9gias-de-implanta%C3%A7%C3%A3o-de-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estratégias de implantação de deploy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../collaborate/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são operadores?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Aritméticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Aritméticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Aritméticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Atribuição
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Atribuição">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Atribuição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-walrusmorsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador Walrus/Morsa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-relacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Relacionais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Relacionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-relacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Relacionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-identidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Identidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Identidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-identidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Identidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-associacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de Associação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores de Associação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-de-associacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores de Associação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Lógicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Lógicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Lógicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-bitwise-bit-a-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores Bitwise (bit-a-bit)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores Bitwise (bit-a-bit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-bitwise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Bitwise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-operadores-bitwise-de-atribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Operadores Bitwise de Atribuição
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de precedência
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordem de precedência">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-da-ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras da ordem de precedência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excecoes-a-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exceções à regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-ordem-de-precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Ordem de Precedência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Voltar ao índice
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/94996150?v=4" alt="Leonardo Amaral">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/devleonardoamaral">Leonardo Amaral</a>
+                        
+                      </strong>
+                      <br>
+                      Software Developer
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadados
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-06-18 00:00:00+00:00" class="md-ellipsis">18 de junho de 2026</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2026-06-19 00:00:00+00:00" class="md-ellipsis">19 de junho de 2026</time>
+                        </div>
+                      </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              8 min de leitura
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+              <ul class="md-post__meta md-nav__list">
+                <li class="md-nav__item md-nav__item--section">
+                  <div class="md-post__title">
+                    <span class="md-ellipsis">
+                      Links relacionados
+                    </span>
+                  </div>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      
+                        
+                        
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.python.org/pt-br/3.14/library/operator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Docs - Operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                      
+                        
+                        
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.python.org/pt-br/3.14/reference/expressions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Docs - Expressões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                      
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+  
+  
+
+
+  <h1>Operadores</h1>
+
+<h2 id="o-que-sao-operadores">O que são operadores?</h2>
+<p>Operadores são símbolos que dizem como a linguagem deve realizar as operações matemáticas, lógicas e comparações.</p>
+<!-- more -->
+
+<h2 id="operadores-aritmeticos">Operadores Aritméticos</h2>
+<p>São usados para realizar cálculos matemáticos. Existem dois tipos de operadores aritméticos: os unários, executam a operação com um operando; e os binários, que executam a operação com dois operandos.</p>
+<h3 id="tabela-operadores-aritmeticos">Tabela Operadores Aritméticos</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Exemplo</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Soma</td>
+<td><code>+a</code></td>
+<td><code>+(-1)</code> → <code>-1</code></td>
+<td>Operador unário, aplica a regra de sinais.</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtração</td>
+<td><code>-a</code></td>
+<td><code>-(-1)</code> → <code>1</code></td>
+<td>Operador unário, aplica a regra de sinais.</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Soma</td>
+<td><code>a + b</code></td>
+<td><code>1 + 3</code> → <code>4</code></td>
+<td>Soma o operando da esquerda <code>a</code> com o operando da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtração</td>
+<td><code>a - b</code></td>
+<td><code>3 - 1</code> → <code>2</code></td>
+<td>Subtrai do operando da esquerda <code>a</code> o operando da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplicação</td>
+<td><code>a * b</code></td>
+<td><code>3 * 2</code> → <code>6</code></td>
+<td>Multiplica o operando da esquerda <code>a</code> com o operando da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Exponênciação</td>
+<td><code>a ** b</code></td>
+<td><code>3 ** 2</code> → <code>9</code></td>
+<td>Eleva a base <code>a</code> à potência <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Divisão</td>
+<td><code>a / b</code></td>
+<td><code>3 / 2</code> → <code>1.5</code></td>
+<td>Divide o operando da esquerda <code>a</code> pelo operando da direita <code>b</code>, sempre resulta em um <code>float</code>. Levanta o erro <code>ZeroDivisionError</code> caso <code>b</code> seja <code>0</code> ou <code>0.0</code>.</td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>Divisão Inteira</td>
+<td><code>a // b</code></td>
+<td><code>3 // 2</code>→ <code>1</code></td>
+<td>Divide o operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e arredonda para baixo. Se ambos os operandos forem <code>int</code>, o resultado é <code>int</code>; caso contrário, é <code>float</code>. Levanta o erro <code>ZeroDivisionError</code> caso <code>b</code> seja <code>0</code> ou <code>0.0</code>.</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Módulo da Divisão</td>
+<td><code>a % b</code></td>
+<td><code>3 % 2</code> → <code>1</code></td>
+<td>Divide o operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e retorna o resto da divisão. Levanta o erro <code>ZeroDivisionError</code> caso <code>b</code> seja <code>0</code> ou <code>0.0</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operadores-de-atribuicao">Operadores de Atribuição</h2>
+<p>São usados para realizar atribuição de valor entre os operandos. Por exemplo, atribuir um valor a uma variável.</p>
+<h3 id="tabela-operadores-de-atribuicao">Tabela Operadores de Atribuição</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Equivale</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>Atribuição</td>
+<td><code>a = b</code></td>
+<td>—</td>
+<td>Atribui no operando à esquerda <code>a</code> o valor do operando à direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>Soma com atribuição</td>
+<td><code>a += b</code></td>
+<td><code>a = a + b</code></td>
+<td>Realiza a soma do operando à esquerda <code>a</code> com o operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>Subtração com atribuição</td>
+<td><code>a -= b</code></td>
+<td><code>a = a - b</code></td>
+<td>Realiza a subtração do operando à direita <code>b</code> do operando à esquerda <code>a</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>Multiplicação com atribuição</td>
+<td><code>a *= b</code></td>
+<td><code>a = a * b</code></td>
+<td>Realiza a multiplicação do operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>Divisão com atribuição</td>
+<td><code>a /= b</code></td>
+<td><code>a = a / b</code></td>
+<td>Realiza a divisão do operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e atribui o resultado (float) ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>//=</code></td>
+<td>Divisão inteira com atribuição</td>
+<td><code>a //= b</code></td>
+<td><code>a = a // b</code></td>
+<td>Realiza a divisão inteira do operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>Módulo com atribuição</td>
+<td><code>a %= b</code></td>
+<td><code>a = a % b</code></td>
+<td>Calcula o resto da divisão do operando à esquerda <code>a</code> pelo operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>**=</code></td>
+<td>Exponenciação com atribuição</td>
+<td><code>a **= b</code></td>
+<td><code>a = a ** b</code></td>
+<td>Eleva o operando à esquerda <code>a</code> à potência do operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operador-walrusmorsa">Operador Walrus/Morsa</h3>
+<p>O operador <code>:=</code> (walrus/morsa) permite atribuir um valor a uma variável e usá-lo no mesmo momento. Ele resolve um problema clássico: evitar que você precise calcular algo duas vezes ou criar uma linha extra só para guardar um valor.</p>
+<p><strong>Veja um exemplo:</strong></p>
+<p>O código lê todas as linhas um arquivo chamado <code>arquivo.txt</code> e as imprime no console.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">arquivo</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">linha</span> <span class="o">=</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">while</span> <span class="n">linha</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">linha</span> <span class="o">=</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1"># Repetido!</span>
+</span></code></pre></div>
+<p><strong>Problema:</strong> a leitura das linhas é feita em dois lugares diferentes no código.</p>
+<p>O operador morsa simplifica isso ao atribuir o conteúdo da linha à variável ao mesmo tempo em que verifica se a linha está vazia, deixando o código mais legível.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">arquivo</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">while</span> <span class="n">linha</span> <span class="o">:=</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">readline</span><span class="p">():</span> <span class="c1"># Uma linha só!</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="operadores-relacionais">Operadores Relacionais</h2>
+<p>Permitem verificar uma relação entre os dois operandos, funcionam com qualquer tipo de dado. O resultado de uma operação relacional é sempre do tipo <code>bool</code>: <code>True</code> (verdadeiro) ou <code>False</code> (falso).</p>
+<h3 id="tabela-operadores-relacionais">Tabela Operadores Relacionais</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Igualdade</td>
+<td><code>a == b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> equivale ao valor à direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Diferença</td>
+<td><code>a != b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> é diferente do valor à direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Maior</td>
+<td><code>a &gt; b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> é maior que o valor da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Menor</td>
+<td><code>a &lt; b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> é menor que o valor da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Maior ou Igual</td>
+<td><code>a &gt;= b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> é maior ou igual ao valor da direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Menor ou Igual</td>
+<td><code>a &lt;= b</code></td>
+<td>Verifica se o valor à esquerda <code>a</code> é menor ou igual ao valor da direita <code>b</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operadores-de-identidade">Operadores de Identidade</h2>
+<p>São operadores usados para verificar se duas variáveis referenciam o mesmo objeto na memória.</p>
+<h3 id="tabela-operadores-de-identidade">Tabela Operadores de Identidade</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is</code></td>
+<td><code>a is b</code></td>
+<td>Verifica se o operando à esquerda <code>a</code> tem o mesmo endereço de memória que o operando à direita <code>b</code>.</td>
+</tr>
+<tr>
+<td><code>is not</code></td>
+<td><code>a is not b</code></td>
+<td>Verifica se o operando à esquerda <code>a</code> não tem mesmo endereço de memória que o operando à direita <code>b</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veja um exemplo:</strong></p>
+<p>Temos duas listas Python, as duas com os mesmos valores armazenados:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">lista2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista1</span> <span class="o">==</span> <span class="n">lista2</span><span class="p">)</span> <span class="c1"># Saída: True</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista1</span> <span class="ow">is</span> <span class="n">lista2</span><span class="p">)</span> <span class="c1"># Saída: False</span>
+</span></code></pre></div>
+<p><strong>O que aconteceu?</strong></p>
+<p>Quando verificamos as listas utilizando o operador relacional de igualdade <code>==</code>, o Python verifica os <strong>valores</strong> das listas; quando utilizamos os operadores de <strong>identidade</strong>, o Python verifica se o endereço de memória que as duas listas possuem são o mesmo.</p>
+<p>Se quiser obter os endereços de memória, o Python possui uma função built-in <code>id()</code>:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">id_lista1</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">lista1</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">id_lista2</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">lista2</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">id_lista1</span><span class="p">)</span> <span class="c1"># Saída: 139712958820672</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">id_lista2</span><span class="p">)</span> <span class="c1"># Saída: 139712958823360</span>
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ <strong>Atenção:</strong> Os endereços de memória sempre vão mudar aleatoriamente para cada execução do programa, pois a memória aloca os valores aleatoriamente.</p>
+</blockquote>
+<h2 id="operadores-de-associacao">Operadores de Associação</h2>
+<p>São operadores utilizados para verificar se uma sequência possui um valor.</p>
+<h3 id="tabela-operadores-de-associacao">Tabela Operadores de Associação</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Exemplo</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>in</code></td>
+<td><code>a in b</code></td>
+<td><code>(1 in [3, 2, 1])</code> → <code>True</code></td>
+<td>Retorna <code>True</code> caso o valor seja encontrado na sequência.</td>
+</tr>
+<tr>
+<td><code>not in</code></td>
+<td><code>a not in b</code></td>
+<td><code>(1 not in [4, 3, 2])</code> → <code>True</code></td>
+<td>Retorna <code>False</code> caso o valor seja encontrado na sequência.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operadores-logicos">Operadores Lógicos</h2>
+<p>São usados para operações de portas lógicas. Os operadores lógicos trabalham operandos do tipo booleano (<code>bool</code>) ou valores que podem se comportar como tal, por exemplo os números inteiros <code>0</code> (falso) e <code>1</code> (verdadeiro). O resultado retornado de uma operação lógica é o valor da última porta acionada.</p>
+<h3 id="tabela-operadores-logicos">Tabela Operadores Lógicos</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>AND lógico (E)</td>
+<td><code>a and b</code></td>
+<td>Retorna imediatamente o valor falso, sem executar o resto da operação, ou o último valor verdadeiro caso todos verdadeiros.</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>OR lógico (OU)</td>
+<td><code>a or b</code></td>
+<td>Retorna imediatamente o primeiro valor verdadeiro, sem executar o resto da operação, ou o último valor caso todos falsos.</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>NOT lógico (NÃO)</td>
+<td><code>not a</code></td>
+<td>Retorna um tipo <code>bool</code> que corresponde ao booleano inverso do operando.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veja um exemplo:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">resultado</span> <span class="o">=</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Saída: True</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">resultado</span> <span class="o">=</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Saída: False</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">resultado</span> <span class="o">=</span> <span class="mi">100</span> <span class="ow">and</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span> <span class="c1"># True and False and True</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Saída: 0</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">100</span> <span class="c1"># False or True or False</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Saída: True</span>
+</span></code></pre></div>
+<h2 id="operadores-bitwise-bit-a-bit">Operadores Bitwise (bit-a-bit)</h2>
+<p>São operadores utilizados para manipular as cadeias de bits de números inteiros (<code>int</code>). A operação percorre os valores bit-a-bit, realizando a operação designada, resultando em uma nova cadeia de bits. O resultado é sempre um número do tipo inteiro (<code>int</code>).</p>
+<h3 id="tabela-operadores-bitwise">Tabela Operadores Bitwise</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Exemplo</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>AND bitwise</td>
+<td><code>a &amp; b</code></td>
+<td><code>0b1011 &amp; 0b1110</code> → <code>0b1010</code></td>
+<td>Desliga o bit caso ambos sejam diferentes (<code>0</code> e <code>1</code>), mantém ligado ou desligado caso ambos forem iguais (<code>1</code> e <code>1</code> ou <code>0</code> e <code>0</code>).</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>OR bitwise</td>
+<td><code>a | b</code></td>
+<td><code>0b1001 | 0b1100</code> → <code>0b1101</code></td>
+<td>Liga o bit caso algum seja <code>1</code> e mantém desligado caso ambos sejam <code>0</code>.</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>XOR bitwise</td>
+<td><code>a ^ b</code></td>
+<td><code>0b1001 ^ 0b0101</code> → <code>0b1100</code></td>
+<td>Liga o bit caso ambos sejam diferentes (<code>0</code> e <code>1</code>) e desliga caso sejam iguais.</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>NOT bitwise</td>
+<td><code>~a</code></td>
+<td><code>~0b0101</code> → <code>-6</code></td>
+<td>Inverte todos os bits do número. Equivalente a <code>-(a+1)</code> para inteiros.</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Deslocamento à esquerda</td>
+<td><code>a &lt;&lt; b</code></td>
+<td><code>0b1 &lt;&lt; 2</code> → <code>0b100</code></td>
+<td>Desloca <code>b</code> bits à esquerda do operando <code>a</code>, preenchendo com <code>0</code> à direita.*</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Deslocamento à direita</td>
+<td><code>a &gt;&gt; b</code></td>
+<td><code>0b101 &gt;&gt; 2</code> → <code>0b1</code></td>
+<td>Desloca <code>b</code> bits à direita do operando <code>a</code>, preenchendo com <code>0</code> à esquerda se positivo ou <code>1</code> se negativo e descartando bits à direita.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-operadores-bitwise-de-atribuicao">Tabela Operadores Bitwise de Atribuição</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operação</th>
+<th>Uso</th>
+<th>Equivale</th>
+<th>Explicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;=</code></td>
+<td>AND bit a bit com atribuição</td>
+<td><code>a &amp;= b</code></td>
+<td><code>a = a &amp; b</code></td>
+<td>Realiza o AND bit a bit entre o operando à esquerda <code>a</code> e o operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>|=</code></td>
+<td>OR bit a bit com atribuição</td>
+<td><code>a |= b</code></td>
+<td><code>a = a | b</code></td>
+<td>Realiza o OR bit a bit entre o operando à esquerda <code>a</code> e o operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>^=</code></td>
+<td>XOR bit a bit com atribuição</td>
+<td><code>a ^= b</code></td>
+<td><code>a = a ^ b</code></td>
+<td>Realiza o XOR bit a bit entre o operando à esquerda <code>a</code> e o operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;=</code></td>
+<td>Deslocamento à direita com atribuição</td>
+<td><code>a &gt;&gt;= b</code></td>
+<td><code>a = a &gt;&gt; b</code></td>
+<td>Desloca os bits do operando à esquerda <code>a</code> para a direita pelo número de posições indicado pelo operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;=</code></td>
+<td>Deslocamento à esquerda com atribuição</td>
+<td><code>a &lt;&lt;= b</code></td>
+<td><code>a = a &lt;&lt; b</code></td>
+<td>Desloca os bits do operando à esquerda <code>a</code> para a esquerda pelo número de posições indicado pelo operando à direita <code>b</code> e atribui o resultado ao operando da esquerda <code>a</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>*</strong> Devido à forma como o Python trabalha com números inteiros, os bits à esquerda não são descartados. Python usa inteiros de precisão arbitrária, então nunca há overflow. </p>
+</blockquote>
+<h2 id="ordem-de-precedencia">Ordem de precedência</h2>
+<p>A ordem de precedência dos operadores define a ordem em que cada operação é realizada quando são misturadas mais de uma operação na mesma instrução. Compreender a ordem de precedência é importante para evitar erros na hora de definir operações.</p>
+<h4 id="regras-da-ordem-de-precedencia">Regras da ordem de precedência</h4>
+<p>Quando operadores têm a mesma prioridade, o Python resolve da esquerda para a direita.</p>
+<h4 id="excecoes-a-regra">Exceções à regra</h4>
+<ul>
+<li><code>**</code> (exponenciação): resolve da direita para a esquerda</li>
+<li><code>if-else</code> (expressão condicional): resolve da direita para a esquerda</li>
+</ul>
+<h3 id="tabela-ordem-de-precedencia">Tabela Ordem de Precedência</h3>
+<p>Itens no topo da tabela tem mais prioridade que os itens da base:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>()</code>, <code>{}</code>, <code>[]</code></td>
+<td>Binding ou expressão entre parênteses, display de lista, display de dicionário, display de conjunto</td>
+</tr>
+<tr>
+<td><code>x(args...)</code>, <code>x[index]</code>, <code>x[index:index]</code>, <code>x.attribute</code></td>
+<td>Chamadas de funções, referenciação de atributos, subscrição (e fatiamento)</td>
+</tr>
+<tr>
+<td><code>await x</code></td>
+<td>Expressões await</td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Exponênciações</td>
+</tr>
+<tr>
+<td><code>+x</code>, <code>-x</code>, <code>~x</code></td>
+<td>Operadores Unários</td>
+</tr>
+<tr>
+<td><code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>@</code></td>
+<td>Multiplicações e Divisões</td>
+</tr>
+<tr>
+<td><code>+</code>, <code>-</code></td>
+<td>Somas e Subtrações</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code>, <code>&gt;&gt;</code></td>
+<td>Deslocamentos Bitwise</td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td>Bitwise AND</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Bitwise XOR</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>Bitwise OR</td>
+</tr>
+<tr>
+<td><code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
+<td>Comparações, Operadores de Identidade, Operadores de Associação</td>
+</tr>
+<tr>
+<td><code>not x</code></td>
+<td>NOT Booleano</td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td>AND Booleano</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>OR Booleano</td>
+</tr>
+<tr>
+<td><code>if</code>-<code>else</code></td>
+<td>Expressões Condicionais</td>
+</tr>
+<tr>
+<td><code>lambda</code></td>
+<td>Expressões lambda</td>
+</tr>
+<tr>
+<td><code>:=</code></td>
+<td>Expressões de atribuição</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veja exemplos:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Sem parênteses: divisão antes da soma</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">resultado</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span> <span class="o">/</span> <span class="mi">2</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>  <span class="c1"># Saída: 20.0 (20/2=10, depois 10+10)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Com parênteses: soma antes da divisão</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">resultado</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>  <span class="c1"># Saída: 15.0 (10+20=30, depois 30/2)</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+    <footer class="md-footer">
+        <div class="md-footer-meta md-typeset">
+            <div class="md-footer-meta__inner md-grid">
+                <div class="md-copyright">
+                    <p>
+                        <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" target="_blank" rel="license noopener noreferrer">
+                            <img src="https://devleonardoamaral.github.io/aprendizado-coletivo-python//assets/images/cc.svg"
+                                    alt="Licença Creative Commons Atribuição 4.0 Internacional"
+                                    width="32"
+                                    height="32"
+                                    style="vertical-align: middle;" />
+                            <img src="https://devleonardoamaral.github.io/aprendizado-coletivo-python//assets/images/by.svg"
+                                    alt=""
+                                    width="32"
+                                    height="32"
+                                    style="vertical-align: middle;" />
+                        </a>
+                         · © 2026 Leonardo Amaral e Fernando Santini
+                    </p>
+                    <p>Blog construído com <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
