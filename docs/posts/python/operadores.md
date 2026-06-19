@@ -17,28 +17,6 @@ Operadores são símbolos que dizem como a linguagem deve realizar as operaçõe
 
 <!-- more -->
 
-## Tipo de dado lógico
-
-Como explicado no artigo [Tipos Básicos](tipos_basicos.md), o Python tem um tipo especial para representar apenas duas possibilidades: **verdadeiro** (`True`) e **falso** (`False`) — esse é o tipo `bool`.
-
-**Veja um exemplo:**
-
-```py
-# 1. Criamos duas "caixinhas" de informação
-moedas = 20      # Quantas moedas você tem no bolso
-preço = 10       # Quanto custa o bilhete
-
-# 2. Fazemos uma PERGUNTA para o Python
-#    "As moedas que tenho são MAIS do que o preço?"
-pode_entrar = moedas > preço
-
-# 3. O Python responde com True (verdadeiro) ou False (falso)
-#    Neste caso: 20 é maior que 10? → SIM! → True
-print(pode_entrar)   # Saída: True
-```
-
-Como mostrado no exemplo acima, o tipo `bool` é o que permite ao programa tomar decisões; por exemplo, liberar a entrada apenas quando a condição for `True`.
-
 ## Operadores Aritméticos
 
 São usados para realizar cálculos matemáticos. Existem dois tipos de operadores aritméticos: os unários, executam a operação com um operando; e os binários, que executam a operação com dois operandos.
